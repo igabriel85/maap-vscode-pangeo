@@ -1,0 +1,36 @@
+schemaVersion: 2.2.2
+metadata:
+  name: maap-pangeo-starter
+attributes:
+   .vscode/extensions.json: |
+      {
+         "recommendations": [
+            "redhat.java",
+            "ms-python.python",
+            "ms-toolsai.jupyter",
+            "ms-azuretools.vscode-docker",
+            "redhat.vscode-yaml",
+            "ms-azuretools.vscode-docker"
+         ]
+      }
+   .che/che-theia-plugins.yaml: |
+       - id: redhat/vscode-yaml
+       - id: ms-python/python
+       - id: ms-toolsai/jupyter
+components:
+  - name: maappythonpangeo
+    container:
+      image: docker.io/pangeo/pangeo-notebook:2024.09.11
+      memoryLimit: 8Gi
+      memoryRequest: 4Gi
+
+
+commands:
+  - id: runjupyter
+    exec:
+      label: "Run Jupyter Notebook"
+      component: maappythonpangeo
+      workingDir: ${HOME}
+      commandLine: "jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
+      group:
+        kind: run
