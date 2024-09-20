@@ -20,7 +20,7 @@ attributes:
 components:
   - name: maappythonpangeo
     container:
-      image: docker.io/pangeo/pangeo-notebook:2024.09.11
+      image: quay.io/igabriel185/maap-pangeo-ascend:latest
       memoryLimit: 8Gi
       memoryRequest: 4Gi
 
