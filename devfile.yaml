@@ -19,11 +19,6 @@ attributes:
        - id: ms-toolsai/jupyter
 components:
   - name: maappythonpangeo
-    attributes:
-        container-overrides:
-            securityContext:
-                runAsUser: 1000
-                runAsGroup: 1000
     container:
       image: quay.io/igabriel185/maap-pangeo-ascend:latest
       memoryLimit: 8Gi
