@@ -35,7 +35,7 @@ commands:
     exec:
       label: "Run Jupyter Notebook"
       component: maappythonpangeo
-      workingDir: ${HOME}
+      workingDir: ${PROJECT_SOURCE}
       commandLine: "jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
       group:
         kind: run
