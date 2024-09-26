@@ -13,7 +13,7 @@ the URL of this repository in  Eclipse Che workspace creation textbox.
 Alternatively, if we have administrator access to Eclipse Che, we can add the workspace to the list of available workspaces in the `getting-started-sample` Kubernetes configmap. We can use `kubectl` as follows:
 
 ```bash
-kubectl create configmap getting-started-samples --from-file=maap_sample.json -n eclipse-che
+kubectl create configmap getting-started-samples --from-file=full_test.json -n eclipse-che
 ```
 
 ```bash
